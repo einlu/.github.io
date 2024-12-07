@@ -1,10 +1,29 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2818
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilfeldig bilde</title>
+</head>
+<body>
+    <h1>Her er et tilfeldig bilde:</h1>
+    <img id="randomImage" alt="Tilfeldig bilde" width="400">
+    <script>
+        // Liste over bilder
+        const images = [
+            'https://via.placeholder.com/400x300?text=Bilde+1',
+            'https://via.placeholder.com/400x300?text=Bilde+2',
+            'https://via.placeholder.com/400x300?text=Bilde+3'
+        ];
 
-\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 <!DOCTYPE html> <html lang="no"> <head> <meta charset="UTF-8"> <meta name="viewport"content="width=device-width, initial-scale=1.0"> <title>Tilfeldig bilde</title> </head> <body> <h1>Her er et tilfeldig bilde:</h1> <img id="randomImage" alt="Tilfeldig bilde" width="400"> <script> const images = ['https://example.com/image1.jpg', 'https://example.com/image2.jpg', 'https://example.com/image3.jpg' ]; functionshowRandomImage() \{ const randomIndex = Math.floor(Math.random() * images.length);document.getElementById('randomImage').src = images[randomIndex]; \} showRandomImage(); </script> </body></html>}
+        // Funksjon for å vise et tilfeldig bilde
+        function showRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            document.getElementById('randomImage').src = images[randomIndex];
+        }
+
+        // Vis et tilfeldig bilde når siden lastes
+        showRandomImage();
+    </script>
+</body>
+</html>
